@@ -1,3 +1,12 @@
+## 2.7.3
+
+* Upgrade Android dependencies to comply to newer Gradle distributions.
+
+## 2.7.2
+
+* Fix #188 `subscribeToCharacteristic` fails when characteristic config descriptor is not present.
+* Fix #195 `scanFailure` when using backgroundmode messaging Firebase.
+
 ## 2.7.1
 
 * Fix #115 by updating to new protobuf lite on Android.
