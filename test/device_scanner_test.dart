@@ -1,11 +1,13 @@
 import 'dart:async';
 import 'dart:typed_data';
 
-import 'package:flutter_reactive_ble/flutter_reactive_ble.dart';
 import 'package:flutter_reactive_ble/src/device_scanner.dart';
 import 'package:flutter_reactive_ble/src/model/discovered_device.dart';
+import 'package:flutter_reactive_ble/src/model/generic_failure.dart';
 import 'package:flutter_reactive_ble/src/model/result.dart';
+import 'package:flutter_reactive_ble/src/model/scan_mode.dart';
 import 'package:flutter_reactive_ble/src/model/scan_session.dart';
+import 'package:flutter_reactive_ble/src/model/uuid.dart';
 import 'package:flutter_reactive_ble/src/plugin_controller.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:mockito/annotations.dart';
@@ -28,6 +30,7 @@ void main() {
         id: '123',
         name: 'Test1',
         serviceData: const {},
+        serviceUuids: const [],
         manufacturerData: Uint8List.fromList([1]),
         rssi: -40,
       );
@@ -35,6 +38,7 @@ void main() {
         id: '456',
         name: 'Test2',
         serviceData: const {},
+        serviceUuids: const [],
         manufacturerData: Uint8List.fromList([0]),
         rssi: -80,
       );
